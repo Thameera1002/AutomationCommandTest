@@ -7,6 +7,10 @@ import org.openqa.selenium.WebDriver;
 
 public class AlertCommands {
     public static void main(String[] args) throws InterruptedException {
+        alertWithOK();
+    }
+
+    public static void alertWithOK() throws InterruptedException {
         WebDriver driver = WebDriverManager.chromiumdriver().create();
         driver.manage().window().maximize();
         driver.get("https://demo.automationtesting.in/Alerts.html");
@@ -20,6 +24,5 @@ public class AlertCommands {
         Thread.sleep(3000);
         alert.accept();
         Thread.sleep(3000);
-
     }
 }
