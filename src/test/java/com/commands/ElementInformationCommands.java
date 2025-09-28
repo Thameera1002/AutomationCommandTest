@@ -20,5 +20,10 @@ public class ElementInformationCommands {
         String attributeText = driver.findElement(By.xpath("(//input[@name='btnK'])[2]")).getAttribute("value");
         Thread.sleep(3000);
         System.out.println(attributeText);
+
+        //isDisplayed()
+        boolean displayed = driver.findElement(By.xpath("//a[text()='Gmail']")).isDisplayed();
+        Thread.sleep(3000);
+        System.out.println(displayed);
     }
 }
