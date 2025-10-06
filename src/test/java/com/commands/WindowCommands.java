@@ -25,6 +25,7 @@ public class WindowCommands {
         Thread.sleep(3000);
         System.out.println(driver.getTitle());
 
+        //Get all windows
         Set<String> allWindows = driver.getWindowHandles();
         Thread.sleep(3000);
         for(String window: allWindows){
