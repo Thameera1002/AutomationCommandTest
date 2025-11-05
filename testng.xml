@@ -4,14 +4,21 @@
     <test verbose="2" preserve-order="true"
           name="/Users/thameeramalinga/Documents/AutomationSession/Projects/AutomationCommandsTest/src/test/java/com/testng/sampletests">
         <classes>
-            <class name="com.testng.sampletests.pkg1.A"></class>
-            <class name="com.testng.sampletests.pkg1.B"></class>
-            <class name="com.testng.sampletests.pkg1.C"></class>
-            <class name="com.testng.sampletests.pkg1.D"></class>
-            <class name="com.testng.sampletests.pkg1.E"></class>
-            <class name="com.testng.sampletests.pkg2.F"></class>
-            <class name="com.testng.sampletests.pkg2.G"></class>
-            <class name="com.testng.sampletests.pkg3.H"></class>
+            <class name="com.testng.sampletests.pkg1.A">
+                <methods>
+                    <include name="a"/>
+                    <exclude name="b"/>
+                    <include name="c"/>
+                    <include name="d"/>
+                </methods>
+            </class>
+<!--            <class name="com.testng.sampletests.pkg1.B"></class>-->
+<!--            <class name="com.testng.sampletests.pkg1.C"></class>-->
+<!--            <class name="com.testng.sampletests.pkg1.D"></class>-->
+<!--            <class name="com.testng.sampletests.pkg1.E"></class>-->
+<!--            <class name="com.testng.sampletests.pkg2.F"></class>-->
+<!--            <class name="com.testng.sampletests.pkg2.G"></class>-->
+<!--            <class name="com.testng.sampletests.pkg3.H"></class>-->
         </classes>
     </test>
 </suite>
