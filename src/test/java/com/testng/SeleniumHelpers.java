@@ -1,21 +1,11 @@
 package com.testng;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
-public class TestNGAnnotationOrder {
-
-    @Test
-    public void testMethod1() {
-        System.out.println("TestMethod1");
-    }
-    @Test
-    public void testMethod2() {
-        System.out.println("TestMethod2");
-    }
-    @Test
-    public void testMethod3() {
-        System.out.println("TestMethod3");
-    }
+public class SeleniumHelpers {
+    protected WebDriver driver;
     @BeforeSuite
     public void beforeSuite() {
         System.out.println("beforeSuite");
@@ -31,10 +21,15 @@ public class TestNGAnnotationOrder {
     @BeforeMethod
     public void beforeMethod() {
         System.out.println("beforeMethod");
+        driver = WebDriverManager.chromedriver().create();
+        driver.manage().window().maximize();
     }
     @AfterMethod
     public void afterMethod() {
         System.out.println("afterMethod");
+        if (driver != null) {
+            driver.quit();
+        }
     }
     @AfterClass
     public void afterClass() {
@@ -44,10 +39,9 @@ public class TestNGAnnotationOrder {
     public void afterTest() {
         System.out.println("afterTest");
     }
-
-
     @AfterSuite
     public void afterSuite() {
         System.out.println("afterSuite");
     }
+
 }
