@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test parallel="methods" thread-count="5" verbose="2" preserve-order="true" name="C:/UCSC_25B3/AutomationTest/src/test/java/com/testng/ParallelEx.java">
+        <classes>
+<!--            xml file for run tests parallel-->
+            <class name="com.testng.ParallelEx">
+            </class>
+        </classes>
+    </test>
+</suite>
