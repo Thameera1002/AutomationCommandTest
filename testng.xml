@@ -2,23 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="/Users/thameeramalinga/Documents/AutomationSession/Projects/AutomationCommandsTest/src/test/java/com/testng/sampletests">
+          name="C:/UCSC_25B3/AutomationTest/src/test/java/com/testng/GroupTestEx.java">
+<!--       group tests-->
+        <groups>
+           <run>
+<!--               <exclude name="smoke"/>-->
+               <include name="regression"></include>
+           </run>
+       </groups>
         <classes>
-            <class name="com.testng.sampletests.pkg1.A">
-                <methods>
-                    <include name="a"/>
-                    <exclude name="b"/>
-                    <include name="c"/>
-                    <include name="d"/>
-                </methods>
-            </class>
-<!--            <class name="com.testng.sampletests.pkg1.B"></class>-->
-<!--            <class name="com.testng.sampletests.pkg1.C"></class>-->
-<!--            <class name="com.testng.sampletests.pkg1.D"></class>-->
-<!--            <class name="com.testng.sampletests.pkg1.E"></class>-->
-<!--            <class name="com.testng.sampletests.pkg2.F"></class>-->
-<!--            <class name="com.testng.sampletests.pkg2.G"></class>-->
-<!--            <class name="com.testng.sampletests.pkg3.H"></class>-->
+            <class name="com.testng.GroupTestEx"></class>
         </classes>
     </test>
 </suite>
