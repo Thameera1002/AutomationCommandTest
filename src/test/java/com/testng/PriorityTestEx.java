@@ -23,7 +23,7 @@ public class PriorityTestEx {
         System.out.println("I'm Test Method d from Class PriorityTestEx");
     }
 
-    @Test
+    @Test(priority = -1)
     public void e(){
         System.out.println("I'm Test Method e from Class PriorityTestEx");
     }
