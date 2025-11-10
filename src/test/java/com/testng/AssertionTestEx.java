@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class AssertionTestEx {
     @Test
@@ -27,5 +28,16 @@ public class AssertionTestEx {
         Assert.assertTrue(displayed);
         System.out.println("Checkpoint reached");
         driver.quit();
+    }
+
+    @Test
+    public void testMethod3() {
+        SoftAssert softAssert = new SoftAssert();
+        System.out.println("A");
+        System.out.println("B");
+        softAssert.assertTrue(false);
+        System.out.println("C");
+        System.out.println("D");
+        softAssert.assertAll();
     }
 }
