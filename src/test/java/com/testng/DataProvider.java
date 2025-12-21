@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class DataProvider {
 
-    @org.testng.annotations.DataProvider
+    @org.testng.annotations.DataProvider(name = "tdp")
     public Object[][] loginDataProvider(){
         Object[][] testDataArray = new Object[][]{
                 {"Test User 0","00123"},
@@ -18,7 +18,7 @@ public class DataProvider {
         return testDataArray;
     }
 
-    @Test(dataProvider = "loginDataProvider")
+    @Test(dataProvider = "tdp")
     public void loginTest(String userName,String password){
         System.out.println("Username is :"+userName+"\nPassword is : "+password+"\n\n");
         WebDriver driver = WebDriverManager.chromedriver().create();

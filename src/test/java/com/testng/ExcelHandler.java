@@ -11,5 +11,18 @@ public class ExcelHandler {
         String testMethodName = method.getName();
         String excelFile = testClassName+".xlsx";
 
+        Class<?> modelClass = getModelClass(testClassName);
+
+        return new Object[][]{};
+
+    }
+
+    private static Class<?> getModelClass(String testClassName){
+        String modelClassName = testClassName + "Data";
+        try{
+            return Class.forName("com.model."+modelClassName);
+        }catch (ClassNotFoundException e){
+            throw new RuntimeException("Model class not found! ");
+        }
     }
 }
